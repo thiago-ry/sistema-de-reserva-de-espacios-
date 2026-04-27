@@ -1,0 +1,286 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #007BFF;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rol {
+  font-weight: 500;
+}
+
+.logout-btn {
+  background-color: white;
+  color: #007BFF;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Main */
+.main-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.bienvenida h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.bienvenida p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.acciones h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 250px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.modal-contenido h2 {
+  margin-bottom: 20px;
+  color: #007BFF;
+  text-align: center;
+}
+
+.modal-contenido label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.modal-contenido input,
+.modal-contenido select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-contenido button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-contenido button:hover {
+  background-color: #0056b3;
+}
+
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5em;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+
+/* === LOGIN CENTRADO CON RECUADRO === */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #007BFF, #00C6FF);
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #007BFF;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+/* === FORMULARIO === */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-box label {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-box input,
+.login-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* === BOTÓN === */
+.login-box button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+
+/* === MENSAJE DE ERROR === */
+.login-box .error {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+/* === ANIMACIÓN SUAVE === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.alerta-exito {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
