@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="4">Personal Administrativo</option>
                 </select>
             </div>
-            <button class="btn" type="submit">Accederr</button>
+            <button class="btn" type="submit">Acceder</button>
         </form>
             <button class="btn-volver" onclick="window.location.href='index.php'">Volver</button>
             <center><a href="registro.php" style="text-decoration: none; color: #007BFF; margin-top: 20px;">¿No tienes una cuenta? Regístrate!!</a></center>
